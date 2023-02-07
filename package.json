@@ -12,5 +12,11 @@
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "sass": "^1.58.0"
+  },
+  "overrides": {
+    "@carbon/react": {
+      "react": "^18",
+      "react-dom": "^18"
+    }
   }
 }
