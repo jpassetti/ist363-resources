@@ -1,0 +1,10 @@
+.filters {
+    background-color: bisque;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+   .row {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+   }
+}

@@ -1,0 +1,38 @@
+.item {
+    // background-color: lightgreen;
+    transition: all 1s;
+    .content {
+        // background-color: lightblue;
+    }
+    &.proximity {
+        padding: 1rem 0;
+    }
+    &.reading-format-default {
+        &.proximity {
+            img {
+                margin-bottom: .5rem;
+            }
+        }
+    }
+    &.reading-format-list {
+        display: flex;
+        gap: 1rem;
+        .content {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+    }
+    &.reading-format-grid {
+        img {
+            width: 100%;
+            height: auto;
+            margin: 0;
+        }
+        &.proximity {
+            img {
+                margin-bottom: .5rem;
+            }
+        }
+    }
+}
