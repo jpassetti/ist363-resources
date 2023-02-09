@@ -1,11 +1,13 @@
 import { useState, Fragment } from 'react';
 
 import Container from '../components/Container';
+import { ContainedList, ContainedListItem } from '@carbon/react';
 import Display from '../components/Display'
 import Filters from '../components/Filters';
 import Heading from '../components/Heading';
 import Image from 'next/image';
 import Item from '../components/Item';
+import Link from 'next/link';
 import Logo from '../components/Logo';
 import Main from '../components/Main';
 import Paragraph from '../components/Paragraph'
@@ -22,75 +24,27 @@ export async function getStaticProps() {
   }
 }
 
-const Homepage = ({coffeesData}) => {
-  const [hasProximity, setProximity] = useState(false);
-  const [hasTypographicContrast, setTypographicContrast] = useState(false);
-  const [hasTypographicHierarchy, setTypographicHierarchy] = useState(false);
-  const [isHumanFriendly, setHumanFriendly] = useState(false);
-  const [readingFormat, setReadingFormat] = useState('default');
-
+const Homepage = () => {
+ 
   return <Fragment>
-      <Filters 
-        hasProximity={hasProximity}
-        setProximity={setProximity}
-        hasTypographicContrast={hasTypographicContrast}
-        setTypographicContrast={setTypographicContrast}
-        hasTypographicHierarchy={hasTypographicHierarchy}
-        setTypographicHierarchy={setTypographicHierarchy}
-        isHumanFriendly={isHumanFriendly}
-        setHumanFriendly={setHumanFriendly}
-        readingFormat={readingFormat}
-        setReadingFormat={setReadingFormat}
-      />
+      
       <Main>
         <Container>
-          {isHumanFriendly && <Logo 
-          hasProximity={hasProximity}
-          />}
-          <Heading 
-            level="1"
-            hasTypographicContrast={hasTypographicContrast}
-            hasTypographicHierarchy={hasTypographicHierarchy}  
-            hasProximity={hasProximity}
-          >Starbucks</Heading>
-          <Heading 
-            level="2"
-            hasTypographicContrast={hasTypographicContrast}
-            hasTypographicHierarchy={hasTypographicHierarchy}  
-            hasProximity={hasProximity}
-          >Espresso Beverages</Heading>
-          <Display 
-            readingFormat={readingFormat}
-            hasProximity={hasProximity}  
-          >
-          {coffeesData.map((coffee, index) => {
-            return <Item 
-              key={index} 
-              hasProximity={hasProximity}
-              readingFormat={readingFormat}  
-            >
-              {isHumanFriendly &&
-                <Image 
-                  src={`/images/coffees/${coffee.slug}.jpg`}
-                  alt={coffee.name}
-                  width={150}
-                  height={150}
-                />
-              }
-              <Item.Content>
-                <Heading 
-                  level="3" 
-                  hasTypographicContrast={hasTypographicContrast}
-                  hasTypographicHierarchy={hasTypographicHierarchy}
-                  hasProximity={hasProximity}
-                >
-                    {coffee.name}
-                </Heading>
-                <Paragraph>{coffee.description}</Paragraph>
-              </Item.Content>
-            </Item>
-          })}
-        </Display>
+          <Heading level="1" hasTypographicHierarchy={true} hasTypographicContrast={true} hasProximity={true}>Interactive Modules</Heading>
+          <Paragraph>This is a collection of interactive modules and components that can be used to build a website.</Paragraph>
+
+          <ol style={{marginTop: "1rem", marginBottom: "1rem"}}>
+              <li>
+                <Link href="/typography">
+                Interactive layout
+                </Link>
+              </li>
+              <li>
+                <Link href="/button">
+                Button
+              </Link>
+              </li>
+            </ol> 
         </Container>
       </Main>
   </Fragment>

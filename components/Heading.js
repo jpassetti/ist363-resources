@@ -8,7 +8,8 @@ const Heading = ({
 	hasTypographicContrast,
 	hasTypographicHierarchy,
 	hasProximity,
-	level
+	level,
+	marginTop,
 }) => {
 	const Tag = level > 6 ? 'h6' : `h${level}`
 
@@ -18,6 +19,7 @@ const Heading = ({
 		hierarchy: hasTypographicHierarchy,
 		contrast: hasTypographicContrast,
 		proximity: hasProximity,
+		[`margin-top-${marginTop}`]: marginTop,
 	});
 
 	return <Tag className={`${headingClasses}`}>{children}</Tag>

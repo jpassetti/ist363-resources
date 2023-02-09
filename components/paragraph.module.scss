@@ -1,4 +1,14 @@
 .paragraph {
     color: black;
     font-family: Arial;
+    @for $i from 1 through 6 {
+        &.margin-bottom-#{$i} {
+            margin-bottom: $i + rem;
+        }
+    }
+    @for $i from 1 through 6 {
+        &.margin-top-#{$i} {
+            margin-top: $i + rem;
+        }
+    }
 }
