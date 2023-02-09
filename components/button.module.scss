@@ -9,8 +9,10 @@
     font-family: Arial;
     font-weight: bold;
     display: flex;
+    align-items: center;
+    transition: all 1s;
     svg {
-        width: 1.5rem;
+        width: 1rem;
         height: auto;
     }
     &.btn-inverse {

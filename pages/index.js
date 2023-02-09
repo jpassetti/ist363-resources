@@ -31,9 +31,10 @@ const Homepage = () => {
       <Main>
         <Container>
           <Heading level="1" hasTypographicHierarchy={true} hasTypographicContrast={true} hasProximity={true}>Interactive Modules</Heading>
-          <Paragraph>This is a collection of interactive modules and components that can be used to build a website.</Paragraph>
+          <Paragraph marginBottom={1}>Below is a collection of interactive modules and stateful components that can be used while designing in Figma or Adobe XD.</Paragraph>
+          <Paragraph>The collection is programmed with ReactJS and styled with SASS.</Paragraph>
 
-          <ol style={{marginTop: "1rem", marginBottom: "1rem"}}>
+          <ul style={{marginTop: "1rem", marginBottom: "1rem"}}>
               <li>
                 <Link href="/typography">
                 Interactive layout
@@ -44,7 +45,7 @@ const Homepage = () => {
                 Button
               </Link>
               </li>
-            </ol> 
+            </ul> 
         </Container>
       </Main>
   </Fragment>
