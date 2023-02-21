@@ -41,8 +41,13 @@ const Homepage = () => {
                 </Link>
               </li>
               <li>
+                <Link href="/typographic-scale">
+                Establishing a typographic scale
+                </Link>
+              </li>
+              <li>
                 <Link href="/button">
-                Button
+                Button component
               </Link>
               </li>
             </ul> 
