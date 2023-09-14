@@ -36,6 +36,11 @@ const Homepage = () => {
 
           <ul style={{marginTop: "1rem", marginBottom: "1rem"}}>
               <li>
+                <Link href="/flexbox">
+               Interactive CSS flexbox
+              </Link>
+              </li>
+              <li>
                 <Link href="/typography">
                 Interactive layout
                 </Link>
