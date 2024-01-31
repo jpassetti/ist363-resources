@@ -1,6 +1,14 @@
+import classNames from 'classnames/bind';
+
 import styles from './flexchild.module.scss';
 
-const FlexChild = () => {
-    return <div className={styles.flexchild}>Child</div>
+let cx = classNames.bind(styles);
+
+const FlexChild = ({height}) => {
+    let flexChildClasses = cx({
+        flexchild: true,
+        [`height-${height}`]: height,
+    });
+    return <div className={flexChildClasses}>Child</div>
 }
 export default FlexChild;

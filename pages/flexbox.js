@@ -85,9 +85,21 @@ const FlexBoxPage = ({coffeesData}) => {
                     value="center"
                     text="Center"
                 />
-                 <SelectItem
+                <SelectItem
                     value="flex-end"
                     text="Flex end"
+                />
+                <SelectItem
+                    value="space-between"
+                    text="Space between"
+                />
+                 <SelectItem
+                    value="space-evenly"
+                    text="Space evenly"
+                />
+                 <SelectItem
+                    value="space-around"
+                    text="Space around"
                 />
             </Select>
             <Select
@@ -108,12 +120,16 @@ const FlexBoxPage = ({coffeesData}) => {
                     value="flex-end"
                     text="Flex end"
                 />
+                 <SelectItem
+                    value="stretch"
+                    text="Stretch"
+                />
             </Select>
       </Filters>
 
         <FlexParent hasFlexbox={hasFlexbox} hasGridGap={hasGridGap} flexDirection={flexDirection} justifyContent={justifyContent} alignItems={alignItems}>
             <FlexChild />
-            <FlexChild />
+            <FlexChild height={2} />
             <FlexChild />
         </FlexParent>
          

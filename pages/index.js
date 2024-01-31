@@ -31,7 +31,7 @@ const Homepage = () => {
       <Main>
         <Container>
           <Heading level="1" hasTypographicHierarchy={true} hasTypographicContrast={true} hasProximity={true}>Interactive Modules</Heading>
-          <Paragraph marginBottom={1}>Below is a collection of interactive modules that help</Paragraph>
+          <Paragraph marginBottom={1}>Below is a collection of interactive modules that help you understand advanced web development concepts.</Paragraph>
 
           <ul style={{marginTop: "1rem", marginBottom: "1rem"}}>
               <li>
