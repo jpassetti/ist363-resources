@@ -30,7 +30,7 @@ const Homepage = () => {
       
       <Main>
         <Container>
-        <Heading level="4" hasTypographicHierarchy={true} hasTypographicContrast={true} hasProximity={true}>MMI 675 Advanced Web Design</Heading>
+        <Heading level="4" hasTypographicHierarchy={true} hasTypographicContrast={true} hasProximity={true}>IST 363 Advanced Web Design</Heading>
           <Heading level="1" hasTypographicHierarchy={true} hasTypographicContrast={true} hasProximity={true}>Interactive Modules</Heading>
           <Paragraph marginBottom={1}>Below is a collection of interactive modules that help you understand advanced web development concepts.</Paragraph>
 
